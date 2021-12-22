@@ -7,7 +7,7 @@ Addon files in this dir files will be synced to alibaba-oss. This addon registry
 You can list all addons by vela cli. For example
 
 ```shell
-vela addon list
+$ vela addon list
 terraform               Terraform Controller is a Kubernetes Controller for Terraform.                                                                          disabled
 velaux                  The KubeVela User Experience (UX ). Dashboard Designed as an extensible, application-oriented delivery and management control panel.    disabled
 ocm-cluster-manager     ocm-cluster-manager can deploy an OCM hub cluster environment.                                                                          disabled
@@ -25,7 +25,7 @@ You can manage the addon-registry by vela cli.
 ```shell
 $ vela addon registry list 
 Name            Type    URL                        
-KubeVela        Oss     https://addons.kubevela.net
+KubeVela        OSS     https://addons.kubevela.net
 ```
 
 You can add your addon files in this dir and help extends KubeVela addons. 

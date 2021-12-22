@@ -7,7 +7,7 @@ Addon files in this dir files will be synced to alibaba-oss. Addons in this  dir
 You can add this addon registry by vela cli and use them.
 
 ```shell
-$ vela addon registry add experimental --type oss --ossEndpoint=https://addons.kubevela.net --path=experimental/
+$ vela addon registry add experimental --type OSS --endpoint=https://addons.kubevela.net --path=experimental/
 ```
 
 ```shell
