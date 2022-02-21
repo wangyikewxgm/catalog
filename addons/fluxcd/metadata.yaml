@@ -16,3 +16,7 @@ needNamespace:
   - flux-system
 
 invisible: false
+
+system:
+  vela: ">=v1.2.3, <=v1.2.4"
+  kubernetes: ">=1.21.0"
