@@ -15,4 +15,5 @@ parameter: {
 	serviceAccountName: *"kubevela-vela-core" | string
 	// +usage=Specify the service type.
 	serviceType: *"ClusterIP" | "NodePort" | "LoadBalancer" | "ExternalName"
+	imagePullSecrets?: [...string]
 }
