@@ -1,15 +1,14 @@
 #!/bin/sh
+set -v
 
 ADDONS=`ls './addons'`
-
-vela addon list
 
 exit_code=0
 for i in $ADDONS ; do
     if [ $i == "observability" ]; then
       echo skip # currently observability addon  has some chances to fail, @zzxwill will fix this issue and
       else
-      vela addon enable $i
+      vela addon enable ./addons/$i
     fi
 
     if [ $? -ne 0 ]; then
