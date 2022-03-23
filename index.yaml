@@ -1,23 +1,13 @@
 apiVersion: v1
 entries:
-  mysql:
+  fluxcd:
   - annotations:
       category: Database
-    apiVersion: v2
-    appVersion: 8.0.28
     created: "2022-03-17T02:52:53.116788942Z"
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      tags:
-      - bitnami-common
-      version: 1.x.x
-    description: MySQL is a fast, reliable, scalable, and easy to use open source
-      relational database system. Designed to handle mission-critical, heavy-load
-      production applications.
+    description: Extended workload to do continuous and progressive delivery
     digest: 352d7dec681f6678456af850d4758fc4b3276f803ea17428b7513a65a572e1a9
     home: https://github.com/bitnami/charts/tree/master/bitnami/mysql
-    icon: https://bitnami.com/assets/stacks/mysql/img/mysql-stack-220x234.png
+    icon: https://raw.githubusercontent.com/fluxcd/flux/master/docs/_files/weave-flux.png
     keywords:
     - mysql
     - database
@@ -32,6 +22,6 @@ entries:
     - https://github.com/bitnami/bitnami-docker-mysql
     - https://mysql.com
     urls:
-    - https://charts.bitnami.com/bitnami/mysql-8.8.27.tgz
+    - https://wangyikewxgm.github.io/catalog/fluxcd-1.0.1.tgz
     version: 8.8.27
 generated: "2021-03-13T23:42:30.9832644+09:00"
