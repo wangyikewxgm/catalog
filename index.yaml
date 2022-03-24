@@ -1,27 +1,429 @@
-apiVersion: v1
+serverinfo: {}
+apiversion: v1
+generated: 0001-01-01T00:00:00Z
 entries:
   fluxcd:
-  - annotations:
-      category: Database
-    created: "2022-03-17T02:52:53.116788942Z"
-    description: Extended workload to do continuous and progressive delivery
-    digest: 352d7dec681f6678456af850d4758fc4b3276f803ea17428b7513a65a572e1a9
-    home: https://github.com/bitnami/charts/tree/master/bitnami/mysql
-    icon: https://raw.githubusercontent.com/fluxcd/flux/master/docs/_files/weave-flux.png
-    keywords:
-    - mysql
-    - database
-    - sql
-    - cluster
-    - high availability
-    maintainers:
-    - email: containers@bitnami.com
-      name: Bitnami
-    name: mysql
-    sources:
-    - https://github.com/bitnami/bitnami-docker-mysql
-    - https://mysql.com
+  - metadata:
+      name: fluxcd
+      home: https://fluxcd.io
+      sources: []
+      version: 1.0.0
+      description: Extended workload to do continuous and progressive delivery
+      keywords:
+      - extended_workload
+      - gitops
+      maintainers: []
+      icon: https://raw.githubusercontent.com/fluxcd/flux/master/docs/_files/weave-flux.png
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
     urls:
-    - https://wangyikewxgm.github.io/catalog/fluxcd-1.0.1.tgz
-    version: 1.0.1
-generated: "2021-03-13T23:42:30.9832644+09:00"
+    - https://wangyikewxgm.github.io/catalog/fluxcd-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  model-serving:
+  - metadata:
+      name: model-serving
+      home: ""
+      sources: []
+      version: 1.0.0
+      description: Enable serving for models
+      keywords:
+      - ai
+      - serving
+      - alpha
+      maintainers: []
+      icon: ""
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/model-serving-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  model-training:
+  - metadata:
+      name: model-training
+      home: ""
+      sources: []
+      version: 1.0.0
+      description: Enable training for models
+      keywords:
+      - ai
+      - training
+      - alpha
+      maintainers: []
+      icon: ""
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/model-training-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  ocm-gateway-manager-addon:
+  - metadata:
+      name: ocm-gateway-manager-addon
+      home: https://github.com/open-cluster-management-io/OCM
+      sources: []
+      version: 1.1.11
+      description: ocm-gateway-manager-addon is the OCM addon automates the cluster-gateway
+        apiserver.
+      keywords:
+      - multicluster
+      maintainers: []
+      icon: https://github.com/open-cluster-management-io/OCM/raw/main/assets/ocm-logo.png
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/ocm-gateway-manager-addon-1.1.11.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  ocm-hub-control-plane:
+  - metadata:
+      name: ocm-hub-control-plane
+      home: https://github.com/open-cluster-management-io/OCM
+      sources: []
+      version: 0.6.0
+      description: ocm-hub-control-plane can install OCM hub control plane to the
+        central cluster.
+      keywords:
+      - multicluster
+      maintainers: []
+      icon: https://github.com/open-cluster-management-io/OCM/raw/main/assets/ocm-logo.png
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/ocm-hub-control-plane-0.6.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  terraform:
+  - metadata:
+      name: terraform
+      home: https://github.com/oam-dev/terraform-controller
+      sources: []
+      version: 1.0.6
+      description: Terraform Controller is a Kubernetes Controller for Terraform.
+      keywords:
+      - IaC
+      - cloud resource
+      maintainers: []
+      icon: https://static.kubevela.net/images/logos/terraform.png
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-1.0.6.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  terraform-alibaba:
+  - metadata:
+      name: terraform-alibaba
+      home: https://registry.terraform.io/providers/aliyun/alicloud/latest
+      sources: []
+      version: 1.0.1
+      description: Kubernetes Terraform Controller for Alibaba Cloud
+      keywords:
+      - terraform provider
+      maintainers: []
+      icon: https://avatars3.githubusercontent.com/aliyun
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-alibaba-1.0.1.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  terraform-aws:
+  - metadata:
+      name: terraform-aws
+      home: https://registry.terraform.io/providers/hashicorp/aws/latest
+      sources: []
+      version: 1.0.0
+      description: Kubernetes Terraform Controller for AWS
+      keywords:
+      - terraform provider
+      maintainers: []
+      icon: https://static.kubevela.net/images/logos/aws.png
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-aws-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  terraform-azure:
+  - metadata:
+      name: terraform-azure
+      home: https://registry.terraform.io/providers/hashicorp/azurerm/latest
+      sources: []
+      version: 1.0.0
+      description: Kubernetes Terraform Controller for Azure
+      keywords:
+      - terraform provider
+      maintainers: []
+      icon: https://avatars3.githubusercontent.com/azure
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-azure-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  terraform-baidu:
+  - metadata:
+      name: terraform-baidu
+      home: https://github.com/oam-dev/terraform-controller
+      sources: []
+      version: 1.0.0
+      description: Kubernetes Terraform Controller Provider for Baidu Cloud
+      keywords:
+      - Terraform Controller Provider
+      - IaC
+      - Cloud Resources
+      maintainers: []
+      icon: ""
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-baidu-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  terraform-gcp:
+  - metadata:
+      name: terraform-gcp
+      home: https://github.com/oam-dev/terraform-controller
+      sources: []
+      version: 1.0.0
+      description: Kubernetes Terraform Controller Provider for Google Cloud Platform
+      keywords:
+      - Terraform Controller Provider
+      - IaC
+      - Cloud Resources
+      maintainers: []
+      icon: ""
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-gcp-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  terraform-tencent:
+  - metadata:
+      name: terraform-tencent
+      home: https://github.com/oam-dev/terraform-controller
+      sources: []
+      version: 1.0.0
+      description: Kubernetes Terraform Controller Provider for Tencent Cloud
+      keywords:
+      - Terraform Controller Provider
+      - IaC
+      - Cloud Resources
+      maintainers: []
+      icon: ""
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-tencent-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  terraform-ucloud:
+  - metadata:
+      name: terraform-ucloud
+      home: https://github.com/oam-dev/terraform-controller
+      sources: []
+      version: 1.0.0
+      description: Kubernetes Terraform Controller Provider for UCloud
+      keywords:
+      - Terraform Controller Provider
+      - IaC
+      - Cloud Resources
+      maintainers: []
+      icon: ""
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-ucloud-1.0.0.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+  velaux:
+  - metadata:
+      name: velaux
+      home: https://kubevela.io
+      sources: []
+      version: 1.2.4
+      description: KubeVela User Experience (UX). An extensible, application-oriented
+        delivery and management Dashboard.
+      keywords:
+      - Official
+      maintainers: []
+      icon: https://static.kubevela.net/images/logos/KubeVela%20-03.png
+      apiversion: ""
+      condition: ""
+      tags: ""
+      appversion: ""
+      deprecated: false
+      annotations: {}
+      kubeversion: ""
+      dependencies: []
+      type: ""
+    urls:
+    - https://wangyikewxgm.github.io/catalog/velaux-1.2.4.tgz
+    created: 0001-01-01T00:00:00Z
+    removed: false
+    digest: ""
+    checksumdeprecated: ""
+    enginedeprecated: ""
+    tillerversiondeprecated: ""
+    urldeprecated: ""
+publickeys: []
+annotations: {}
