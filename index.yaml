@@ -1,7 +1,7 @@
 apiVersion: v1
 entries:
   fluxcd:
-  - created: "2022-03-25T15:05:00.699923+08:00"
+  - created: "2022-03-28T15:19:37.908921+08:00"
     description: Extended workload to do continuous and progressive delivery
     home: https://fluxcd.io
     icon: https://raw.githubusercontent.com/fluxcd/flux/master/docs/_files/weave-flux.png
@@ -13,7 +13,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/fluxcd-1.0.0.tgz
     version: 1.0.0
   model-serving:
-  - created: "2022-03-25T15:05:00.741268+08:00"
+  - created: "2022-03-28T15:19:37.962773+08:00"
     description: Enable serving for models
     keywords:
     - ai
@@ -24,7 +24,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/model-serving-1.0.0.tgz
     version: 1.0.0
   model-training:
-  - created: "2022-03-25T15:05:00.753483+08:00"
+  - created: "2022-03-28T15:19:37.979184+08:00"
     description: Enable training for models
     keywords:
     - ai
@@ -35,7 +35,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/model-training-1.0.0.tgz
     version: 1.0.0
   ocm-gateway-manager-addon:
-  - created: "2022-03-25T15:05:00.766117+08:00"
+  - created: "2022-03-28T15:19:37.996073+08:00"
     description: ocm-gateway-manager-addon is the OCM addon automates the cluster-gateway
       apiserver.
     home: https://github.com/open-cluster-management-io/OCM
@@ -47,7 +47,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/ocm-gateway-manager-addon-1.1.11.tgz
     version: 1.1.11
   ocm-hub-control-plane:
-  - created: "2022-03-25T15:05:00.798619+08:00"
+  - created: "2022-03-28T15:19:38.033784+08:00"
     description: ocm-hub-control-plane can install OCM hub control plane to the central
       cluster.
     home: https://github.com/open-cluster-management-io/OCM
@@ -59,6 +59,17 @@ entries:
     - https://wangyikewxgm.github.io/catalog/ocm-hub-control-plane-0.6.0.tgz
     version: 0.6.0
   terraform:
+  - created: "2022-03-28T15:19:38.058606+08:00"
+    description: Terraform Controller is a Kubernetes Controller for Terraform.
+    home: https://github.com/oam-dev/terraform-controller
+    icon: https://static.kubevela.net/images/logos/terraform.png
+    keywords:
+    - IaC
+    - cloud resource
+    name: terraform
+    urls:
+    - https://wangyikewxgm.github.io/catalog/terraform-1.0.6.tgz
+    version: 1.0.6
   - created: "2022-03-25T15:05:00.81751+08:00"
     description: Terraform Controller is a Kubernetes Controller for Terraform.
     home: https://github.com/oam-dev/terraform-controller
@@ -70,19 +81,8 @@ entries:
     urls:
     - https://wangyikewxgm.github.io/catalog/terraform-1.0.7.tgz
     version: 1.0.7
-  - created: "0001-01-01T00:00:00Z"
-    description: Terraform Controller is a Kubernetes Controller for Terraform.
-    home: https://github.com/oam-dev/terraform-controller
-    icon: https://static.kubevela.net/images/logos/terraform.png
-    keywords:
-    - IaC
-    - cloud resource
-    name: terraform
-    urls:
-    - https://wangyikewxgm.github.io/catalog/terraform-1.0.6.tgz
-    version: 1.0.6
   terraform-alibaba:
-  - created: "2022-03-25T15:05:00.833029+08:00"
+  - created: "2022-03-28T15:19:38.080896+08:00"
     description: Kubernetes Terraform Controller for Alibaba Cloud
     home: https://registry.terraform.io/providers/aliyun/alicloud/latest
     icon: https://avatars3.githubusercontent.com/aliyun
@@ -93,7 +93,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/terraform-alibaba-1.0.1.tgz
     version: 1.0.1
   terraform-aws:
-  - created: "2022-03-25T15:05:00.87348+08:00"
+  - created: "2022-03-28T15:19:38.132328+08:00"
     description: Kubernetes Terraform Controller for AWS
     home: https://registry.terraform.io/providers/hashicorp/aws/latest
     icon: https://static.kubevela.net/images/logos/aws.png
@@ -104,7 +104,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/terraform-aws-1.0.0.tgz
     version: 1.0.0
   terraform-azure:
-  - created: "2022-03-25T15:05:00.918104+08:00"
+  - created: "2022-03-28T15:19:38.181317+08:00"
     description: Kubernetes Terraform Controller for Azure
     home: https://registry.terraform.io/providers/hashicorp/azurerm/latest
     icon: https://avatars3.githubusercontent.com/azure
@@ -115,7 +115,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/terraform-azure-1.0.0.tgz
     version: 1.0.0
   terraform-baidu:
-  - created: "2022-03-25T15:05:00.934874+08:00"
+  - created: "2022-03-28T15:19:38.200419+08:00"
     description: Kubernetes Terraform Controller Provider for Baidu Cloud
     home: https://github.com/oam-dev/terraform-controller
     keywords:
@@ -127,7 +127,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/terraform-baidu-1.0.0.tgz
     version: 1.0.0
   terraform-gcp:
-  - created: "2022-03-25T15:05:00.948808+08:00"
+  - created: "2022-03-28T15:19:38.220176+08:00"
     description: Kubernetes Terraform Controller Provider for Google Cloud Platform
     home: https://github.com/oam-dev/terraform-controller
     keywords:
@@ -139,7 +139,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/terraform-gcp-1.0.0.tgz
     version: 1.0.0
   terraform-tencent:
-  - created: "2022-03-25T15:05:00.987677+08:00"
+  - created: "2022-03-28T15:19:38.263955+08:00"
     description: Kubernetes Terraform Controller Provider for Tencent Cloud
     home: https://github.com/oam-dev/terraform-controller
     keywords:
@@ -151,7 +151,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/terraform-tencent-1.0.0.tgz
     version: 1.0.0
   terraform-ucloud:
-  - created: "2022-03-25T15:05:01.002247+08:00"
+  - created: "2022-03-28T15:19:38.282536+08:00"
     description: Kubernetes Terraform Controller Provider for UCloud
     home: https://github.com/oam-dev/terraform-controller
     keywords:
@@ -163,7 +163,7 @@ entries:
     - https://wangyikewxgm.github.io/catalog/terraform-ucloud-1.0.0.tgz
     version: 1.0.0
   velaux:
-  - created: "2022-03-25T15:05:01.016401+08:00"
+  - created: "2022-03-28T15:19:38.301871+08:00"
     description: KubeVela User Experience (UX). An extensible, application-oriented
       delivery and management Dashboard.
     home: https://kubevela.io
