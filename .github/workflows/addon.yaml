@@ -2,7 +2,7 @@ name: Addon Registry
 on:
   push:
     branches:
-      - master
+      - "*"
     tags:
       - "v*"
   workflow_dispatch: {}
@@ -14,11 +14,11 @@ env:
 jobs:
   packge-addon-gen-index:
     env:
-      ADDON_BUCKET: kubevela-addons
+      ADDON_BUCKET: yiling-addons
       ADDON_DIR: addons
       ADDON_ENDPOINT: oss-cn-beijing.aliyuncs.com
       EXPERIMENTAL_DIR: experimental/addons
-      URL: https://addons.kubevela.net
+      URL: yiling-addons.oss-cn-beijing.aliyuncs.com
       GO_VERSION: 1.17
     runs-on: ubuntu-20.04
 
