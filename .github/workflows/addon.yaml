@@ -18,7 +18,7 @@ jobs:
       ADDON_DIR: addons
       ADDON_ENDPOINT: oss-cn-beijing.aliyuncs.com
       EXPERIMENTAL_DIR: experimental/addons
-      URL: yiling-addons.oss-cn-beijing.aliyuncs.com
+      URL: https://yiling-addons.oss-cn-beijing.aliyuncs.com
       GO_VERSION: 1.17
     runs-on: ubuntu-20.04
 
