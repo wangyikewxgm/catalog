@@ -2,7 +2,7 @@ name: Addon Registry
 on:
   push:
     branches:
-      - master
+      - "*"
     tags:
       - "v*"
   workflow_dispatch: {}
