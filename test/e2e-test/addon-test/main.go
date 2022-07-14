@@ -141,7 +141,7 @@ func enableAddonsByOrder (changedAddon map[string]bool)  error {
 		changedAddon["terraform"] = false
 	}
 	if changedAddon["velaux"] {
-		if err := enableOneAddon(fmt.Sprintf(dirPattern, "dex")); err != nil {
+		if err := enableOneAddon(fmt.Sprintf(dirPattern, "velaux")); err != nil {
 			return err
 		}
 		changedAddon["velaux"] = false
