@@ -238,3 +238,53 @@ func disableOneAddon (addonName string) error {
 	}
 	return nil
 }
+
+
+// this func can be used for debug when addon enable failed.
+func checkAppStatus(addonName string)  {
+	cmd := exec.Command("vela","status", "-n", "vela-system", "addon-" + addonName)
+	fmt.Println(cmd.String())
+	stdout, err := cmd.StdoutPipe()
+	cmd.Stderr = cmd.Stdout
+	if err != nil {
+		panic(err)
+	}
+	if err = cmd.Start(); err != nil {
+		fmt.Println(err)
+	}
+	for {
+		tmp := make([]byte, 1024)
+		_, err := stdout.Read(tmp)
+		fmt.Print(string(tmp))
+		if err != nil {
+			break
+		}
+	}
+	if err = cmd.Wait(); err != nil {
+		fmt.Println(err)
+	}
+}
+
+func checkPodStatus(namespace string) {
+	cmd := exec.Command("kubectl","get pods", "-n", namespace)
+	fmt.Println(cmd.String())
+	stdout, err := cmd.StdoutPipe()
+	cmd.Stderr = cmd.Stdout
+	if err != nil {
+		panic(err)
+	}
+	if err = cmd.Start(); err != nil {
+		fmt.Println(err)
+	}
+	for {
+		tmp := make([]byte, 1024)
+		_, err := stdout.Read(tmp)
+		fmt.Print(string(tmp))
+		if err != nil {
+			break
+		}
+	}
+	if err = cmd.Wait(); err != nil {
+		fmt.Println(err)
+	}
+}
