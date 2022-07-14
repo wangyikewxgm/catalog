@@ -128,8 +128,8 @@ func checkAddonDependency(addon string, changedAddon map[string]bool ) {
 	}
 }
 
-// This func will enable addon rely on every addon's dependency,
-// this func is very dummy now, we can generated DAG rely-on dependent relationShip further more.
+// This func will enable addon by order rely-on addon's relationShip dependency,
+// this func is so dummy now that the order is written manually, we can generated a dependency DAG workflow in the furture.
 func enableAddonsByOrder (changedAddon map[string]bool)  error {
 	dirPattern := "addons/%s"
 	if changedAddon["fluxcd"] {
