@@ -73,6 +73,7 @@ func determineNeedEnableAddon (changedFile []string) map[string]bool {
 		}
 
 		if regRes := globalRex.Find([]byte(s)); len(regRes) != 0 {
+			// change CI related file, must test all addons
 			err := putInAllAddons(changedAddon)
 			if err != nil {
 				return nil
