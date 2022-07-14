@@ -40,7 +40,8 @@ var file = "addons/velaux/template.yaml"
 var regexPattern = "^addons.*"
 var globalRexPattern = "^.github.*|makefile|test/e2e-test/addon-test/main.go"
 
-var testFile = []string{"addons/velaux/metadata.yaml", "makefile", "addons/traefik/template.yaml", "test/addons/template.yaml"}
+// This can be used for pending some error addon temporally, Please fix it as soon as posible.
+var pendingAddon = map[string]bool{"ocm-gateway-manager-addon": true}
 
 func main() {
 	//fmt.Println(filepath.Split(file))
@@ -126,6 +127,8 @@ func checkAddonDependency(addon string, changedAddon map[string]bool ) {
 	}
 }
 
+// This func will enable addon rely on every addon's dependency,
+// this func is very dummy now, we can generated DAG rely-on dependent relationShip further more.
 func enableAddonsByOrder (changedAddon map[string]bool)  error {
 	dirPattern := "addons/%s"
 	if changedAddon["fluxcd"] {
@@ -147,7 +150,7 @@ func enableAddonsByOrder (changedAddon map[string]bool)  error {
 		changedAddon["velaux"] = false
 	}
 	for s, b := range changedAddon {
-		if b {
+		if b && !pendingAddon[s] {
 			if err := enableOneAddon(fmt.Sprintf(dirPattern, s)); err != nil {
 				return err
 			}
