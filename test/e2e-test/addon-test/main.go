@@ -162,8 +162,8 @@ func enableAddonsByOrder (changedAddon map[string]bool)  error {
 				if err := disableOneAddon("velaux"); err != nil {
 					return err
 				}
-			case "cert-manager":
-				if err := disableOneAddon("flink-kubernetes-operator"); err != nil {
+			case "flink-kubernetes-operator":
+				if err := disableOneAddon("cert-manager"); err != nil {
 					return err
 				}
 			}
