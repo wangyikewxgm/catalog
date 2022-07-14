@@ -127,7 +127,7 @@ func checkAddonDependency(addon string, changedAddon map[string]bool ) {
 }
 
 func enableAddonsByOrder (changedAddon map[string]bool)  error {
-	dirPattern := "dir/%s"
+	dirPattern := "addons/%s"
 	if changedAddon["fluxcd"] {
 		if err := enableOneAddon(fmt.Sprintf(dirPattern, "fluxcd")); err != nil {
 			return err
