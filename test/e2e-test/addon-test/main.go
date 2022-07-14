@@ -150,6 +150,12 @@ func enableAddonsByOrder (changedAddon map[string]bool)  error {
 		}
 		changedAddon["velaux"] = false
 	}
+	if changedAddon["cert-manage"] {
+		if err := enableOneAddon(fmt.Sprintf(dirPattern, "cert-manage")); err != nil {
+			return err
+		}
+		changedAddon["cert-manage"] = false
+	}
 	for s, b := range changedAddon {
 		if b && !pendingAddon[s] {
 			if err := enableOneAddon(fmt.Sprintf(dirPattern, s)); err != nil {
