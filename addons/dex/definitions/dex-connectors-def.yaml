@@ -27,7 +27,7 @@ spec:
                         labels: {
                                 "config.oam.dev/catalog":       "velacore-config"
                                 "config.oam.dev/type":          "dex-connector"
-                                "config.oam.dev/multi-cluster": "false"
+                                "config.oam.dev/multi-cluster": "true"
                                 "config.oam.dev/identifier":    context.name
                                 "config.oam.dev/sub-type":      parameter.type
                         }
