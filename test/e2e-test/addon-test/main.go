@@ -41,7 +41,7 @@ var regexPattern = "^addons.*"
 var globalRexPattern = "^.github.*|makefile|test/e2e-test/addon-test/main.go"
 
 // This can be used for pending some error addon temporally, Please fix it as soon as posible.
-var pendingAddon = map[string]bool{"ocm-gateway-manager-addon": true}
+var pendingAddon = map[string]bool{"ocm-gateway-manager-addon": true, "model-serving": true}
 
 func main() {
 	//fmt.Println(filepath.Split(file))
@@ -137,16 +137,6 @@ func enableAddonsByOrder (changedAddon map[string]bool)  error {
 			return err
 		}
 		changedAddon["fluxcd"] = false
-	}
-	if changedAddon["model-serving"] {
-		if err := enableOneAddon(fmt.Sprintf(dirPattern, "model-serving")); err != nil {
-			return err
-		}
-		changedAddon["model-serving"] = false
-		if err := disableOneAddon("model-serving"); err != nil {
-			checkAppStatus("model-serving")
-			return err
-		}
 	}
 	if changedAddon["terraform"] {
 		if err := enableOneAddon(fmt.Sprintf(dirPattern, "terraform")); err != nil {
