@@ -44,7 +44,6 @@ var globalRexPattern = "^.github.*|makefile|test/e2e-test/addon-test/main.go"
 var pendingAddon = map[string]bool{"ocm-gateway-manager-addon": true, "model-serving": true}
 
 func main() {
-	//fmt.Println(filepath.Split(file))
 	changedFile := os.Args[1:]
 	changedAddon := determineNeedEnableAddon(changedFile)
 	if len(changedAddon) == 0 {
