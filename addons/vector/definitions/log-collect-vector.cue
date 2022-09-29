@@ -24,7 +24,6 @@ import (
 template: {
 	_dir: *"" | string
 
-	if parameter.path != _|_ {
 		outputs: config: {
 			apiVersion: "v1"
 			kind:       "ConfigMap"
@@ -134,18 +133,11 @@ template: {
 				}
 			}
 		}
-	}
 
-	if parameter.collectStdout != _|_ && parameter.collectStdout == true {
-		patch: {
-			spec: template: metadata: labels: {
-				"log-collector": "vector"
-			}
-		}
-	}
+
 
 	parameter: {
-		path?:          string
-		collectStdout?: *false | bool
+		path:          string
 	}
+
 }
