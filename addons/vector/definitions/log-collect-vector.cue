@@ -123,9 +123,12 @@ template: {
 					endpoint:    "http://loki:3100"
 					compression: "none"
 					labels: {
-						log_type:      "file"
-						pod_name:      '${MY_POD_NAME}'
-						pod_namespace: '${MY_POD_NAMESPACE}'
+						agent: "vector"
+						stream:  "file"
+						forward: "sidecar"
+						filename: "{{ file }}"
+						pod:      '${MY_POD_NAME}'
+						namespace: '${MY_POD_NAMESPACE}'
 					}
 					encoding: {
 						codec: "json"
