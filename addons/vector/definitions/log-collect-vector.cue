@@ -129,6 +129,7 @@ template: {
 						filename: "{{ file }}"
 						pod:      '${MY_POD_NAME}'
 						namespace: '${MY_POD_NAMESPACE}'
+						cluster: context.cluster
 					}
 					encoding: {
 						codec: "json"
