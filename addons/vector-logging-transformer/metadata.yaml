@@ -1,0 +1,6 @@
+description: An addon for transfromer application log using vector.
+icon: ""
+name: vector-logging-transformer
+tags:
+- loggin
+version: 0.1.0
