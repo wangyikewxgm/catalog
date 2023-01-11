@@ -2,16 +2,16 @@
 
 ## Introduction
 
-This is repo of source files of community KubeVela [addons](https://kubevela.net/docs/reference/addons/overview) which extend the capability of platform. An addoon can be a kubernetes operator and its [X-definition](https://kubevela.net/docs/getting-started/definition) such as [Fluxcd](addons/fluxcd) or other useful components for KubeVela such as [VelaUX](addons/velaux).
+This is repo of source files of community KubeVela [addons](https://kubevela.net/docs/reference/addons/overview) which extend the capability of platform. An addon can be a kubernetes operator and its [X-definition](https://kubevela.net/docs/getting-started/definition) such as [Fluxcd](addons/fluxcd) or other useful components for KubeVela such as [VelaUX](addons/velaux).
 
 Addons here contain [verified](./addons) addons which have been tested for a long time can be used in product environment and [experimental](experimental/addons) addons which isn't general available yet.
 
-* [Verified Addons](/addons): when a pull Request of addons were merged to this directory, the addon will automatically synced to the OSS bucket( https://addons.kubevela.net ). This will be displayed in vela CLI by `vela addon list` or VelaUX by default.
+* [Verified Addons](/addons): when a pull Request of addons were merged to this directory, the addon will be automatically packaged and synced to the OSS bucket( https://addons.kubevela.net ). This will be displayed in vela CLI by `vela addon list` or VelaUX by default.
 
 ![image](https://user-images.githubusercontent.com/2173670/160372119-3e62044c-ce93-428d-9681-a91f0742bbaf.png)
 
 
-* [Experimental Addons](/experimental/addons): some addons which were not well verified will be merged into the experimental addons directory, the addon will also be synced to the OSS bucket( https://addons.kubevela.net in path `experimental`) automatically. 
+* [Experimental Addons](/experimental/addons): some addons which were not well verified will be merged into the experimental addons directory, the addon will also be packaged and synced to the OSS bucket( https://addons.kubevela.net in path `experimental`) automatically. 
 
 ![image](https://user-images.githubusercontent.com/2173670/160373204-80e74587-606c-4522-9802-11d4f572450b.png)
 
@@ -23,7 +23,7 @@ You can enable these addons by Vela cli or VelaUX. Please refer to [doc](https:/
 
 Community members are welcome to contribute this repo by putting their customize vela addons here.
 
->This [doc](https://kubevela.net/docs/platform-engineers/addon/intro) will introduce how to make an KuebVela addon and the mechanism behind it.
+>This [doc](https://kubevela.net/docs/platform-engineers/addon/intro) will introduce how to make an KubeVela addon and the mechanism behind it.
 
 Please be aware of this contribution rules when contribute addons.
 
@@ -33,11 +33,13 @@ Please be aware of this contribution rules when contribute addons.
 
 - A verified Addon must have some basic important information.
 
-  - A accessible icon url and source url defined in addon's `metadata.yaml`
+  - An accessible icon url and source url defined in addon's `metadata.yaml`
     
   - A detail introduction for this addon in `README.md` for this addon as the [documentation](https://kubevela.net/docs/reference/addons/overview).
     
   - Better provide many useful examples in [dir](examples/)
+
+- If any issues arise with the addon, please feel free to address them. And please bump up the addon version in your pull request.
     
 ## Community
 
