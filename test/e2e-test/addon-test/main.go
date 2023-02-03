@@ -81,7 +81,7 @@ func main() {
 	if len(changedAddon) == 0 {
 		return
 	}
-	if err := enableAddonsByOrder("addons/%s", changedAddon); err != nil {
+	if _, err := enableAddonsByOrder("addons/%s", changedAddon, false); err != nil {
 		fmt.Fprintf(os.Stderr, "%s", err)
 		os.Exit(1)
 	}
@@ -281,12 +281,17 @@ func readAddonMeta(addonName string) (*AddonMeta, error) {
 
 // This func will enable addon by order rely-on addon's relationShip dependency,
 // this func is so dummy now that the order is written manually, we can generated a dependency DAG workflow in the furture.
-func enableAddonsByOrder(dirPattern string, changedAddon map[string]bool) error {
+func enableAddonsByOrder(dirPattern string, changedAddon map[string]bool, loopCheck bool) ([]string, error) {
 	// TODO: make topology sort to auto sort the order of enable
+	var failedAddons []string
 	for _, addonName := range []string{"fluxcd", "terraform", "velaux", "cert-manager", "vela-prism", "o11y-definitions", "prometheus-server"} {
 		if changedAddon[addonName] && !pendingAddon[addonName] {
 			if err := enableOneAddon(fmt.Sprintf(dirPattern, addonName)); err != nil {
-				return err
+				if loopCheck {
+					failedAddons = append(failedAddons, addonName)
+					continue
+				}
+				return nil, err
 			}
 			changedAddon[addonName] = false
 		}
@@ -294,14 +299,18 @@ func enableAddonsByOrder(dirPattern string, changedAddon map[string]bool) error 
 	for s, b := range changedAddon {
 		if b && !pendingAddon[s] {
 			if err := enableOneAddon(fmt.Sprintf(dirPattern, s)); err != nil {
-				return err
+				if loopCheck {
+					failedAddons = append(failedAddons, s)
+					continue
+				}
+				return nil, err
 			}
 			if err := disableOneAddon(s); err != nil {
-				return err
+				return nil, err
 			}
 		}
 	}
-	return nil
+	return failedAddons, nil
 }
 
 func enableOneAddon(dir string) error {
@@ -488,9 +497,10 @@ func loopCheck() error {
 	for _, addon := range addons {
 		enableAddons[addon] = true
 	}
-	err = enableAddonsByOrder("%s", enableAddons)
-	if err != nil {
-		return err
+	failedAddons, err := enableAddonsByOrder("%s", enableAddons, true)
+	if len(failedAddons) != 0 {
+		ioutil.WriteFile("/root/failed-addons", []byte(fmt.Sprint(failedAddons)), 0644)
+		return fmt.Errorf("addons loop check error, failed addons %s", failedAddons)
 	}
 	return nil
 }
