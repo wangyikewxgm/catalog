@@ -484,6 +484,7 @@ func testDefinitionsInAddons(addons string) error {
 
 // logic below is about loop check
 func loopCheck() error {
+	fmt.Println("Begin the process of loop check addon")
 	addons, err := calculateAddonsNameFromRepoUrl(repoURL)
 	if err != nil {
 		return err
