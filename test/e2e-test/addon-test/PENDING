@@ -7,7 +7,6 @@ flink-kubernetes-operator
 
 ## only for test
 
-harbor
 chartmuseum
 node-exporter
 terraform-azure
