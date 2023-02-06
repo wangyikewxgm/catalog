@@ -4,3 +4,27 @@
 ocm-gateway-manager-addon
 model-serving
 flink-kubernetes-operator
+
+## only for test
+
+envoy-gateway
+example-cue
+velaux-dev
+grafana-definitions
+cert-manager
+observability
+argocd
+example
+clickhouse
+mongodb-operator
+istio-gateway
+chartmuseum
+examplec-cue
+istio
+observability-assets
+kube-trigger
+chaosblade-operator
+traefik-gateway
+harbor
+gateway-traits
+cronhpa
