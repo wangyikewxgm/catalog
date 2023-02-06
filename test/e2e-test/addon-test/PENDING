@@ -57,7 +57,7 @@ observability-assets
 vector-config
 argocd
 examplec-cue
-harbor
+istio
 redis-operator
 traefik-gateway
 chaosblade-operator
