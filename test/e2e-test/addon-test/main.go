@@ -489,11 +489,6 @@ func loopCheck() error {
 	if err != nil {
 		return err
 	}
-	expAddons, err := calculateAddonsNameFromRepoUrl(experimentalRepoURL)
-	if err != nil {
-		return err
-	}
-	addons = append(addons, expAddons...)
 	enableAddons := map[string]bool{}
 	for _, addon := range addons {
 		enableAddons[addon] = true
@@ -502,6 +497,19 @@ func loopCheck() error {
 	if len(failedAddons) != 0 {
 		ioutil.WriteFile("/root/failed-addons", []byte(fmt.Sprint(failedAddons)), 0644)
 		return fmt.Errorf("addons loop check error, failed addons %s", failedAddons)
+	}
+	expAddons, err := calculateAddonsNameFromRepoUrl(experimentalRepoURL)
+	if err != nil {
+		return err
+	}
+	enableAddons = map[string]bool{}
+	for _, addon := range expAddons {
+		enableAddons[addon] = true
+	}
+	failedAddons, _ = enableAddonsByOrder("%s", enableAddons, true)
+	if len(failedAddons) != 0 {
+		ioutil.WriteFile("/root/failed-exp-addons", []byte(fmt.Sprint(failedAddons)), 0644)
+		return fmt.Errorf("addons loop check error, failed exp addons %s", failedAddons)
 	}
 	return nil
 }
