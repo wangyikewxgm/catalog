@@ -317,7 +317,7 @@ func enableOneAddon(dir string) error {
 	var cmd *exec.Cmd
 	switch {
 	case strings.Contains(dir, "fluxcd"):
-		cmd = exec.Command("vela", "addon", "enable", dir, "onlyHelmComponents=true")
+		cmd = exec.Command("vela", "addon", "enable", dir, "--version=2.3.4", "onlyHelmComponents=true")
 	case strings.Contains(dir, "loki"):
 		cmd = exec.Command("vela", "addon", "enable", dir, "serviceType=NodePort")
 	default:
