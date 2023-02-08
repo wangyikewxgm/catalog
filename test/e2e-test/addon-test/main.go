@@ -494,9 +494,10 @@ func loopCheck() error {
 		enableAddons[addon] = true
 	}
 	failedAddons, err := enableAddonsByOrder("%s", enableAddons, true)
+	failed := false
 	if len(failedAddons) != 0 {
 		ioutil.WriteFile("/root/failed-addons", []byte(fmt.Sprint(failedAddons)), 0644)
-		return fmt.Errorf("addons loop check error, failed addons %s", failedAddons)
+		failed = true
 	}
 	expAddons, err := calculateAddonsNameFromRepoUrl(experimentalRepoURL)
 	if err != nil {
@@ -509,7 +510,10 @@ func loopCheck() error {
 	failedAddons, _ = enableAddonsByOrder("%s", enableAddons, true)
 	if len(failedAddons) != 0 {
 		ioutil.WriteFile("/root/failed-exp-addons", []byte(fmt.Sprint(failedAddons)), 0644)
-		return fmt.Errorf("addons loop check error, failed exp addons %s", failedAddons)
+		failed = true
+	}
+	if failed {
+		return fmt.Errorf("failed to loop check addons")
 	}
 	return nil
 }
